@@ -1,0 +1,72 @@
+
+
+{% extends "module2/staffindex.html" %}
+{% block body %}
+<body><form action="leaverequest" method="post" enctype="multipart/form-data">
+  <table width="354" border="1" id="customers">
+  <tr>
+    <th>leave date</th>
+    <td><label>
+    <input type="date" name="date" required>
+    </label></td>
+  </tr>
+  <tr>
+    <th>Reason</th>
+    <td><label>
+      <textarea name="name"></textarea>
+    </label></td>
+  </tr>
+
+
+       <tr>
+    <th width="43">Day</th>
+    <td width="295"><label>
+      <select name="select">
+
+          <option>MONDAY</option>
+          <option>TUESDAY</option>
+          <option>WEDNESDAY</option>
+          <option>THURSDAY</option>
+          <option>FRIDAY</option>
+
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="2"><label>
+      <input type="submit" name="Submit" value="send" />
+    </label></td>
+    </tr>
+</table>
+
+
+
+
+      <table width="200" border="1" id="customers">
+    <tr>
+      <th>Leave date</th>
+      <th>Reason</th>
+      <th>day</th>
+        <th>status</th>
+
+    </tr>
+    {% for i in val1 %}
+    <tr>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+        <td>{{i[6]}}</td>
+        <td>{{i[5]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</form>
+</body>
+{% endblock %}
+<!--</html>-->
+</title>
+</head>
+<body>
+
+</body>
+</html>

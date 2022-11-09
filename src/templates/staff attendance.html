@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends "adminindex.html" %}
+{% block body %}
+
+<body><form action="sattendance#services" method="post">
+<table width="200" border="1" id="customers">
+  <tr>
+    <th colspan="3">course
+      <label>
+      <select name="select">
+        {%for i in val%}
+        <option value="{{i[0]}}">{{i[1]}}</option>
+        {%endfor%}
+      </select>
+      </label>      <label>
+      <input type="submit" name="Submit" value="Search" class="btn btn-light"/>
+      </label></th>
+    </tr>
+</table>
+</form>
+  <form action="ssattendance#services" method="post">
+<table width="200" border="1" id="customers">
+  <tr>
+    <th>staff name </th>
+    <th>attendance</th>
+  </tr>
+  <tr>
+        {% for i in val1 %}
+
+    <td value="{{i[1]}}">{{i[2]}} {{i[3]}}</td>
+    <td>&nbsp; <input type="checkbox" name="checkbox" value="{{i[1]}}" /></td>
+  </tr>
+  {%endfor%}
+
+   <tr>
+      <td colspan="3"><label>
+        <input type="submit" name="Submit" value="finish" />
+      </label></td>
+    </tr>
+</table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

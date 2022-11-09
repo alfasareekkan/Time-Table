@@ -1,0 +1,23 @@
+{% extends "module2/staffindex.html" %}
+{% block body %}
+<body>
+
+      <table width="200" border="1" id="customers">
+    <tr>
+      <th>day</th>
+      <th>hour</th>
+      <th>sem</th>
+
+
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+        <td>{{i[2]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</body>
+{% endblock %}

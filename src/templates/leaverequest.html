@@ -1,0 +1,38 @@
+{% extends "adminindex.html" %}
+{% block body %}
+<body><form action="leaverequest" method="post" enctype="multipart/form-data">
+
+      <table width="200" border="1" id="customers">
+    <tr>
+        <th>Date</th>
+        <th>staff name</th>
+      <th>Leave date</th>
+      <th>Reason</th>
+      <th>day</th>
+        <th>status</th>
+
+    </tr>
+    {% for i in val %}
+    <tr>
+        <td>{{i[4]}}</td>
+        <td>{{i[0]}} {{i[1]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+        <td>{{i[8]}}</td>
+        <td><a href="/acceptreq?id={{i[2]}}">accept</a>
+        <a href="/rejectreq?id={{i[2]}}">reject</a>
+        </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</form>
+</body>
+{% endblock %}
+<!--</html>-->
+</title>
+</head>
+<body>
+
+</body>
+</html>

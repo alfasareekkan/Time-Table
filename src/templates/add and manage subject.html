@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends "adminindex.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="add_subject#services">
+  <table width="200" border="0" id="customers">
+    <tr>
+      <th>semester</th>
+      <th>subject_code </th>
+      <th>subject</th>
+       <th>course</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      {% for i in val %}
+      <td>{{i[4]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[6]}}</td>
+      <td><p><a href="editSubject?id={{i[0]}}#services">Edit</a></p>
+      <p><a href="deleteSubject?id={{i[0]}}">delete</a></p></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="4"><label>
+        <div align="center">
+          <input name="Submit" type="submit" value="Add"  class="btn btn-outline-primary"/>
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+
+<!--</html>-->

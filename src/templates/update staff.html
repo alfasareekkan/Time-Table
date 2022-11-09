@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="#services">
+  <table width="200" border="1">
+    <tr>
+      <td>first name </td>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>last name </td>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>gender</td>
+      <td><label>
+        <input name="radiobutton" type="radio" value="radiobutton" checked />
+      male
+      <input name="radiobutton" type="radio" value="radiobutton" />
+      female</label></td>
+    </tr>
+    <tr>
+      <td>phone number </td>
+      <td><label>
+        <input type="text" name="textfield3" required pattern="[6789][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="45">email</td>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="45">department</td>
+      <td><label>
+        <input type="text" name="textfield5" pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+   
+    <tr>
+      <td height="45" colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="update"  class="btn btn-outline-primary"/>
+        </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

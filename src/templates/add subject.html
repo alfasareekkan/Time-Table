@@ -1,0 +1,59 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends "adminindex.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="addSubjectvalues">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>course</th>
+      <td><label>
+        <select name="select" required>
+          {% for i in val %}
+          <option value='{{i[0]}}'>{{i[1]}}</option>
+          {% endfor %}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>semester</th>
+      <td><label>
+        <select name="select2">
+          <option value="s1">S1</option>
+          <option value="s2">S2</option>
+          <option value="s3">S3</option>
+          <option value="s4">S4</option>
+          <option value="s5">S5</option>
+          <option value="s6">S6</option>
+
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>subject_code</th>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z 0-9.]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>subject</th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z 0-9.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" class="btn btn-outline-primary" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

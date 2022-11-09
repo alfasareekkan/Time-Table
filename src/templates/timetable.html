@@ -1,0 +1,265 @@
+{% extends "adminindex.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="sub#services">
+  <p>course 
+    <label for="select"></label>
+    <select name="select" id="select">
+      {%for i in val%}
+      <option value="{{i[0]}}" {%if i[0] == cr %} selected {%endif%}>{{i[1]}}</option>
+      {%endfor%}
+    </select>
+  </p>
+<br>
+
+  <p>sem
+    <label for="select2"></label>
+    <select name="select2" id="select2">
+      <option>s1</option>
+            <option>s2</option>
+      <option>s3</option>
+      <option>s4</option>
+      <option>s5</option>
+    </select>
+
+    </select>
+  </p>
+    <br>
+  <p>
+    <input type="submit" name="button" id="button" value="Search" />
+  </p>
+
+  </form>
+<form action="/insertdata" method="post">
+  <table width="938" border="1" id="customers">
+    <tr>
+      <td>&nbsp;</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+
+    </tr>
+    <tr>
+      <td width="126">M</td>
+      <td width="126"><label for="select3"></label>
+        <select name="select3" id="select3">
+          <option value="0">--select--</option>
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td width="126"><label for="select3"></label>
+        <select name="select8" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td width="126"><label for="select3"></label>
+        <select name="select13" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td width="126"><label for="select3"></label>
+        <select name="select18" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td width="268"><label for="select3"></label>
+        <select name="select23" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td><label for="select3"></label>
+        <select name="select4" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select9" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select14" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select19" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select24" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td><label for="select3"></label>
+        <select name="select5" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select10" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select15" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select20" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select25" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td><label for="select3"></label>
+        <select name="select6" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select11" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select16" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select21" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select26" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td height="34"><label for="select3"></label>
+        <select name="select7" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+      <select name="select12" id="select3">
+                  <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select17" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select22" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+      <td><label for="select3"></label>
+        <select name="select27" id="select3">
+                    <option value="0">--select--</option>
+
+           {%for i in val1%}
+      <option value="{{i[0]}}">{{i[3]}}</option>
+      {%endfor%}
+      </select></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+        <input type="submit" name="button" id="dd" value="finish" />
+
+</form>
+</body>
+{% endblock %}

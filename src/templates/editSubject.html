@@ -1,0 +1,59 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends "adminindex.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="editSubjectvalues">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>course</th>
+      <td><label>
+        <select name="select">
+          {% for i in val1 %}
+          <option value='{{i[0]}}'{% if val[1]==i[0] %} selected {% endif %}>{{i[1]}}</option>
+          {% endfor %}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>semester</th>
+      <td><label>
+        <select name="select2">
+          <option value="s1"{% if val[4]=='s1' %} selected {% endif %}>S1</option>
+          <option value="s2"{% if val[4]=='s2' %} selected {% endif %}>S2</option>
+          <option value="s3"{% if val[4]=='s3' %} selected {% endif %} >S3</option>
+          <option value="s4"{% if val[4]=='s4' %} selected {% endif %}>S4</option>
+          <option value="s5"{% if val[4]=='s5' %} selected {% endif %}>S5</option>
+          <option value="s6"{% if val[4]=='s5' %} selected {% endif %}>S6</option>
+
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>subject_code</th>
+      <td><label>
+        <input type="text" name="textfield" value="{{val[2]}}" required />
+      </label></td>
+    </tr>
+    <tr>
+      <th>subject</th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[3]}}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" class="btn btn-outline-primary" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

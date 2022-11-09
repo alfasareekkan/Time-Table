@@ -1,0 +1,101 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends "module2/staffindex.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/addStudent">
+  <table width="249" border="1" id="customers">
+    <tr>
+      <th width="78">regno</th>
+      <td width="155"><label>
+        <input type="text" name="textfield" required />
+      </label></td>
+    </tr>
+    <tr>
+      <th>first name </th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>last name </th>
+      <td><label>
+        <input type="text" name="textfield3" required pattern="[A-Z a-z.]{1,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>course</th>
+      <td><label>
+        <select name="select" required>
+          {% for i in val %}
+          <option value='{{i[0]}}'>{{i[1]}}</option>
+          {% endfor %}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>semester</th>
+      <td><label>
+        <select name="select2" required>
+          <option value="s1">S1</option>
+          <option value="s2">S2</option>
+          <option value="s3" >S3</option>
+          <option value="s4">S4</option>
+          <option value="s5">S5</option>
+          <option value="s6">S6</option>
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td><label>
+        <input name="radiobutton" type="radio" value="male" checked />
+      male
+      <input name="radiobutton" type="radio" value="female" />
+      female</label></td>
+    </tr>
+    <tr>
+      <th>phone</th>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[6789][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>parent phone </th>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[6789][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>email</th>
+      <td><label>
+        <input type="text" name="textfield6" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>username</th>
+      <td><label>
+        <input type="text" name="textfield7" required />
+      </label></td>
+    </tr>
+    <tr>
+      <th>password</th>
+      <td><label>
+        <input type="password" name="textfield8" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <input type="submit" name="Submit" value="add" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+<p>&nbsp;</p>
+</body>
+{% endblock %}
+<!--</html>-->
